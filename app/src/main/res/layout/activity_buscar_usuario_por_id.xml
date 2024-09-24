@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/buscarEditTextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Id de usuario"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/buscarButton"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="setWidgetsConInformacion"
+                    android:text="Buscar" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/buscarEditTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:enabled="false"
+                android:text="Nombre" />
+
+            <EditText
+                android:id="@+id/buscarEditTextApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Apellido"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/buscarEditTextDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Documento"
+                android:inputType="text|number" />
+
+            <EditText
+                android:id="@+id/buscarEditTextEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Edad"
+                android:inputType="text|number" />
+
+            <EditText
+                android:id="@+id/buscarEditTextTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Telefono"
+                android:inputType="text|number" />
+
+            <EditText
+                android:id="@+id/buscarEditTextDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Direccion"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/buscarEditTextNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Nacimiento ddmmaaaa"
+                android:inputType="text|date" />
+
+            <EditText
+                android:id="@+id/buscarEditTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Email"
+                android:inputType="textEmailAddress" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/buscarTextViewGenero"
+                    android:layout_width="136dp"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:text="Genero" />
+
+                <RadioGroup
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/buscarRButtonMasculino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Masculino" />
+
+                    <RadioButton
+                        android:id="@+id/buscarRButtonFemenino"
+                        android:layout_width="127dp"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:text="Femenino" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/buscarTextViewEstadoCivil"
+                    android:layout_width="136dp"
+                    android:layout_height="31dp"
+                    android:layout_weight="1"
+                    android:text="Estado Civil" />
+
+                <RadioGroup
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/buscarRButtonCasado"
+                        android:layout_width="94dp"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="Casado" />
+
+                    <RadioButton
+                        android:id="@+id/buscarRButtonSoltero"
+                        android:layout_width="127dp"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:text="Soltero" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/buscarTextViewGustos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gustos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/buscarCheckBoxMusica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Musica" />
+
+                <CheckBox
+                    android:id="@+id/buscarCheckBoxDeporte"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Deporte" />
+
+                <CheckBox
+                    android:id="@+id/buscarCheckBoxCine"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Cine" />
+
+                <CheckBox
+                    android:id="@+id/buscarCheckBoxComida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Comida" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/buscarCheckBoxViajes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Viajes" />
+
+                <CheckBox
+                    android:id="@+id/buscarCheckBoxLibros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="Libros" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewEquipoFut"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Equipo de futbol favorito" />
+
+                <TextView
+                    android:id="@+id/equipoFutFav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Equipo de futbol favorito" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/buscarEditTextPeliculaFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Película Favorita"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/buscarEditTextColorFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="text"
+                android:text="Color Favorito" />
+
+            <EditText
+                android:id="@+id/buscarEditTextComidaFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="text"
+                android:text="Comida Favorita" />
+
+            <EditText
+                android:id="@+id/buscarEditTextLibroFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Libro Favorito"
+                android:inputType="text" />
+
+            <!-- Campos nuevos añadidos -->
+
+            <EditText
+                android:id="@+id/buscarEditTextCancionFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:text="Canción Favorita"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textViewDescPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción personal" />
+
+            <EditText
+                android:id="@+id/buscarEditTextDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Descripción personal..."
+                android:inputType="textMultiLine"
+                android:enabled="false"
+                android:lines="5"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

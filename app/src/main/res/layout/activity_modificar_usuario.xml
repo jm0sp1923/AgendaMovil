@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/modificarEditTextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Id de usuario a modificar"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/modificarBBuscarUsuarioModificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="MsetWidgetsConInformacion"
+                    android:text="Buscar usuario" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/modificarEditTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Apellido"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Documento"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Teléfono"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Dirección"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nacimiento ddmmaaaa"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/modificarTextViewGenero"
+                    android:layout_width="136dp"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:text="Género" />
+
+                <RadioGroup
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/modificarRButtonMasculino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Masculino" />
+
+                    <RadioButton
+                        android:id="@+id/modificarRButtonFemenino"
+                        android:layout_width="127dp"
+                        android:layout_height="wrap_content"
+                        android:text="Femenino" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/modificarTextViewEstadoCivil"
+                    android:layout_width="136dp"
+                    android:layout_height="31dp"
+                    android:layout_weight="1"
+                    android:text="Estado Civil" />
+
+                <RadioGroup
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/modificarRButtonCasado"
+                        android:layout_width="94dp"
+                        android:layout_height="wrap_content"
+                        android:text="Casado" />
+
+                    <RadioButton
+                        android:id="@+id/modificarRButtonSoltero"
+                        android:layout_width="127dp"
+                        android:layout_height="wrap_content"
+                        android:text="Soltero" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/modificarTextViewGustos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gustos" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/modificarCheckBoxMusica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Música" />
+
+                <CheckBox
+                    android:id="@+id/modificarCheckBoxDeporte"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Deporte" />
+
+                <CheckBox
+                    android:id="@+id/modificarCheckBoxCine"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cine" />
+
+                <CheckBox
+                    android:id="@+id/modificarCheckBoxComida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Comida" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/modificarCheckBoxViajes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Viajes" />
+
+                <CheckBox
+                    android:id="@+id/modificarCheckBoxLibros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Libros" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/modificarTextViewEquipoFut"
+                    android:layout_width="352dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Equipo de fútbol favorito" />
+
+                <Spinner
+                    android:id="@+id/modificarEquipoDefutSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/modificarEditTextPeliculaFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Película Favorita"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextColorFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Color Favorito"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextComidaFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Comida Favorita"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextLibroFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Libro Favorito"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modificarEditTextCancionFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Cancion Favorita"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/modificarEditTextDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Descripción personal..."
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:scrollbars="vertical" />
+s
+
+            <Button
+                android:id="@+id/modificarBRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="modificarInformacionUsuario"
+                android:text="Modificar" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
